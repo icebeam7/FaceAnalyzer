@@ -13,7 +13,7 @@ namespace FaceAnalyzer
 		{
 			InitializeComponent();
 
-			MainPage = new FaceAnalyzer.MainPage();
+            MainPage = new NavigationPage(new FaceAnalyzer.Paginas.PaginaAnalisis());
 		}
 
 		protected override void OnStart ()

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceAnalyzer.Paginas.PaginaAnalisis">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <Label Text="Análisis de Fotogafía" TextColor="Black" FontSize="Large" Margin="15"/>
+            <Image x:Name="imagen" WidthRequest="300" HeightRequest="300" HorizontalOptions="Center" Margin="15" />
+            <ActivityIndicator x:Name="indicator" Color="Green" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <Grid Margin="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Text="Característica" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                <Label Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" Text="Thresold" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                <Label Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" Text="Resultado" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                <Label Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center" Text="Análisis" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+
+                <Label Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" Text="Vista al Frente" FontSize="Large" TextColor="Black"/>
+                <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" Text="20" FontSize="Medium" TextColor="Blue"/>
+                <Label Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" x:Name="txtFrente" FontSize="Medium"/>
+                <Label Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center" x:Name="txtAnalisisFrente" FontSize="Medium"/>
+
+                <Label Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" Text="Apertura Boca" FontSize="Large" TextColor="Black"/>
+                <Label Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" Text="0.2" FontSize="Medium" TextColor="Blue"/>
+                <Label Grid.Row="2" Grid.Column="2" HorizontalTextAlignment="Center" x:Name="txtBoca" FontSize="Medium"/>
+                <Label Grid.Row="2" Grid.Column="3" HorizontalTextAlignment="Center" x:Name="txtAnalisisBoca" FontSize="Medium"/>
+
+                <Label Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="Center" Text="Apertura Ojos" FontSize="Large" TextColor="Black"/>
+                <Label Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center" Text="0.45" FontSize="Medium" TextColor="Blue"/>
+                <Label Grid.Row="3" Grid.Column="2" HorizontalTextAlignment="Center" x:Name="txtOjos" FontSize="Medium"/>
+                <Label Grid.Row="3" Grid.Column="3" HorizontalTextAlignment="Center" x:Name="txtAnalisisOjos" FontSize="Medium"/>
+
+                <Label Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="Center" Text="Teléfono" FontSize="Large" TextColor="Black"/>
+                <Label Grid.Row="4" Grid.Column="1" HorizontalTextAlignment="Center" Text="NO" FontSize="Medium" TextColor="Blue"/>
+                <Label Grid.Row="4" Grid.Column="2" HorizontalTextAlignment="Center" x:Name="txtCelular" FontSize="Medium"/>
+                <Label Grid.Row="4" Grid.Column="3" HorizontalTextAlignment="Center" x:Name="txtAnalisisCelular" FontSize="Medium"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnTomarFoto" Text="Foto" Order="Primary" Priority="0" Clicked="btnTomarFoto_Clicked"/>
+        <ToolbarItem x:Name="btnAnalizar" Text="Analizar" Order="Primary" Priority="0" Clicked="btnAnalizar_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>
